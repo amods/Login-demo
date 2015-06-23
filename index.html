@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta author="Amod shankar, email - amods@outlook.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Login demo</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+</head>
+<body ng-app="loginDemo" ng-controller="baseController">
+    <div class="container-fluid">
+        <br /><br />
+        <div class="alert alert-success" ng-show="loginSuccess" role="alert">Logged in successfully !</div>
+        <div class="alert alert-danger" ng-show="loginFailure" role="alert">Log in failed !</div>
+        <br />
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="userName" class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="userName" ng-model="user.username" placeholder="Enter email address" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="userPwd" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" id="userPwd" ng-model="user.password" placeholder="Enter password" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" ng-click="logIn()" class="btn btn-primary">Log in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
